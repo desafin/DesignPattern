@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <list>
 #include <string>
 
@@ -51,7 +51,7 @@ private:
 class Observer : public ConcreteObserver {
 public:
 	Observer(Subject& subject) : subject_(subject) {
-		this->subject_.Attach(this);	// »ı¼ºÀÚ¿¡¼­ ÀÚµ¿À¸·Î Subject¿¡ µî·ÏÇÔ
+		this->subject_.Attach(this);	// ìƒì„±ìì—ì„œ ìë™ìœ¼ë¡œ Subjectì— ë“±ë¡í•¨
 
 		std::cout << "Observer" << ++Observer::cnt_for_id << " created.\n";
 		this->id = Observer::cnt_for_id;
@@ -85,7 +85,7 @@ int Observer::cnt_for_id = 0;
 int main() {
 
 
-	Subject* subject = new Subject; // oververµéÀ» µî·ÏÇÒ subject
+	Subject* subject = new Subject; // oververë“¤ì„ ë“±ë¡í•  subject
 
 	Observer* observer1 = new Observer(*subject);
 	Observer* observer2 = new Observer(*subject);
